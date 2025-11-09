@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Users, CreditCard, TrendingUp, BookOpen, Newspaper, Award, Star, Clock, Calendar } from "lucide-react";
+import { Users, CreditCard, TrendingUp, BookOpen, Newspaper, Award, Star, Clock, Calendar, Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 // Mock data for popular courses
 const popularCourses = [
@@ -69,6 +69,9 @@ export default function Home() {
               </Link>
               <Link href="/news" className="text-white hover:text-cyan-400 transition-colors">
                 News
+              </Link>
+              <Link href="/contact" className="text-white hover:text-cyan-400 transition-colors">
+                Contact
               </Link>
               <Link href="/admin" className="text-white hover:text-cyan-400 transition-colors">
                 Admin
@@ -302,15 +305,142 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black/40 backdrop-blur-sm border-t border-white/10 py-8">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <Award className="h-6 w-6 text-cyan-400" />
-            <span className="text-white font-semibold">Smart Wellness Academy</span>
+      <footer className="bg-black/40 backdrop-blur-sm border-t border-white/10 py-12">
+        <div className="container mx-auto px-4">
+          {/* Main Footer Content */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            {/* Brand Section */}
+            <div className="md:col-span-1">
+              <div className="flex items-center space-x-2 mb-4">
+                <Award className="h-6 w-6 text-cyan-400" />
+                <span className="text-white font-semibold">Smart Wellness Academy</span>
+              </div>
+              <p className="text-white/70 mb-4">
+                Empowering individuals through comprehensive wellness programs and modern management.
+              </p>
+              <div className="flex space-x-3">
+                <a href="https://facebook.com/smartwellnessacademy" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-cyan-400 transition-colors">
+                  <Facebook className="h-5 w-5" />
+                </a>
+                <a href="https://instagram.com/smartwellnessacademy" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-cyan-400 transition-colors">
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a href="https://twitter.com/smartwellnessacademy" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-cyan-400 transition-colors">
+                  <Twitter className="h-5 w-5" />
+                </a>
+                <a href="https://youtube.com/smartwellnessacademy" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-cyan-400 transition-colors">
+                  <Youtube className="h-5 w-5" />
+                </a>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/courses" className="text-white/70 hover:text-cyan-400 transition-colors">
+                    Our Programs
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/news" className="text-white/70 hover:text-cyan-400 transition-colors">
+                    Latest News
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="text-white/70 hover:text-cyan-400 transition-colors">
+                    Contact Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/admin" className="text-white/70 hover:text-cyan-400 transition-colors">
+                    Admin Portal
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Programs */}
+            <div>
+              <h3 className="text-white font-semibold mb-4">Popular Programs</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/courses" className="text-white/70 hover:text-cyan-400 transition-colors">
+                    Yoga Fundamentals
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/courses" className="text-white/70 hover:text-cyan-400 transition-colors">
+                    Tai Chi Wellness
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/courses" className="text-white/70 hover:text-cyan-400 transition-colors">
+                    Fitness Training
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/courses" className="text-white/70 hover:text-cyan-400 transition-colors">
+                    View All Programs
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h3 className="text-white font-semibold mb-4">Get In Touch</h3>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <MapPin className="h-4 w-4 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div className="text-white/70 text-sm">
+                    <p>123 Wellness Boulevard</p>
+                    <p>Health District, HD 12345</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Phone className="h-4 w-4 text-cyan-400 flex-shrink-0" />
+                  <a href="tel:+1-555-WELLNESS" className="text-white/70 hover:text-cyan-400 transition-colors text-sm">
+                    +1 (555) WELLNESS
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Mail className="h-4 w-4 text-cyan-400 flex-shrink-0" />
+                  <a href="mailto:info@smartwellness.com" className="text-white/70 hover:text-cyan-400 transition-colors text-sm">
+                    info@smartwellness.com
+                  </a>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Clock className="h-4 w-4 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div className="text-white/70 text-sm">
+                    <p>Mon-Fri: 6AM-10PM</p>
+                    <p>Sat-Sun: 7AM-8PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <p className="text-white/70">
-            Empowering individuals through comprehensive wellness programs and modern management.
-          </p>
+
+          {/* Bottom Footer */}
+          <div className="border-t border-white/10 pt-6">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <p className="text-white/60 text-sm mb-4 md:mb-0">
+                © 2025 Smart Wellness Academy. All rights reserved.
+              </p>
+              <div className="flex space-x-6 text-sm">
+                <Link href="/privacy" className="text-white/60 hover:text-cyan-400 transition-colors">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms" className="text-white/60 hover:text-cyan-400 transition-colors">
+                  Terms of Service
+                </Link>
+                <Link href="/contact" className="text-white/60 hover:text-cyan-400 transition-colors">
+                  Support
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>

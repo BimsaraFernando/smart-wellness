@@ -440,7 +440,7 @@ export default function CoursesPage() {
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
                     <div
-                      className="bg-orange-500 h-2 rounded-full"
+                      className="bg-blue-500 h-2 rounded-full"
                       style={{ width: `${(course.currentStudents / course.maxStudents) * 100}%` }}
                     ></div>
                   </div>
@@ -481,7 +481,7 @@ export default function CoursesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact" 
-              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Schedule a Trial Class
             </Link>
