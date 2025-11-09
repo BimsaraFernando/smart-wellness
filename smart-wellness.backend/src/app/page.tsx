@@ -73,9 +73,6 @@ export default function Home() {
               <Link href="/contact" className="text-white hover:text-cyan-400 transition-colors">
                 Contact
               </Link>
-              <Link href="/admin" className="text-white hover:text-cyan-400 transition-colors">
-                Admin
-              </Link>
             </nav>
           </div>
         </div>
@@ -99,10 +96,10 @@ export default function Home() {
               View Courses
             </Link>
             <Link 
-              href="/admin/students" 
+              href="/contact" 
               className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-colors backdrop-blur-sm border border-white/20"
             >
-              Student Portal
+              Get Started Today
             </Link>
           </div>
         </div>
@@ -236,70 +233,74 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Management Dashboard Preview */}
+      {/* Academy Features Section */}
       <section className="py-16 px-4 bg-black/20 backdrop-blur-sm">
         <div className="container mx-auto">
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Wellness Academy Management System
+          <h3 className="text-3xl font-bold text-white text-center mb-4">
+            Why Choose Smart Wellness Academy?
           </h3>
+          <p className="text-xl text-white/80 text-center mb-12 max-w-3xl mx-auto">
+            Experience comprehensive wellness education with our modern approach to health and fitness
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link href="/admin/students" className="group">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
-                <Users className="h-12 w-12 text-blue-400 mb-4" />
-                <h4 className="text-xl font-semibold text-white mb-2">Student Management</h4>
-                <p className="text-white/70">
-                  Manage student enrollments, track progress, and maintain detailed profiles.
-                </p>
-              </div>
-            </Link>
-
-            <Link href="/admin/payments" className="group">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
-                <CreditCard className="h-12 w-12 text-green-400 mb-4" />
-                <h4 className="text-xl font-semibold text-white mb-2">Payment Tracking</h4>
-                <p className="text-white/70">
-                  Monitor tuition payments, generate invoices, and track financial records.
-                </p>
-              </div>
-            </Link>
-
-            <Link href="/admin/progress" className="group">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
-                <TrendingUp className="h-12 w-12 text-purple-400 mb-4" />
-                <h4 className="text-xl font-semibold text-white mb-2">Progress Tracking</h4>
-                <p className="text-white/70">
-                  Track belt progressions, skill assessments, and testing schedules.
-                </p>
-              </div>
-            </Link>
-
-            <Link href="/admin/courses" className="group">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
-                <BookOpen className="h-12 w-12 text-orange-400 mb-4" />
-                <h4 className="text-xl font-semibold text-white mb-2">Course Management</h4>
-                <p className="text-white/70">
-                  Create and manage courses, schedules, and instructor assignments.
-                </p>
-              </div>
-            </Link>
-
-            <Link href="/admin/news" className="group">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
-                <Newspaper className="h-12 w-12 text-yellow-400 mb-4" />
-                <h4 className="text-xl font-semibold text-white mb-2">News & Events</h4>
-                <p className="text-white/70">
-                  Publish academy news, announcements, and upcoming events.
-                </p>
-              </div>
-            </Link>
-
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
-              <Award className="h-12 w-12 text-red-400 mb-4" />
-              <h4 className="text-xl font-semibold text-white mb-2">Achievement System</h4>
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+              <Users className="h-12 w-12 text-blue-400 mb-4" />
+              <h4 className="text-xl font-semibold text-white mb-2">Expert Instructors</h4>
               <p className="text-white/70">
-                Track belts, certifications, and student achievements.
+                Learn from certified professionals with years of experience in their respective wellness disciplines.
               </p>
             </div>
+
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+              <CreditCard className="h-12 w-12 text-green-400 mb-4" />
+              <h4 className="text-xl font-semibold text-white mb-2">Flexible Payment Plans</h4>
+              <p className="text-white/70">
+                Affordable wellness programs with flexible payment options to fit your budget and lifestyle.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+              <TrendingUp className="h-12 w-12 text-purple-400 mb-4" />
+              <h4 className="text-xl font-semibold text-white mb-2">Progress Tracking</h4>
+              <p className="text-white/70">
+                Monitor your wellness journey with detailed progress tracking and personalized goal setting.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+              <BookOpen className="h-12 w-12 text-orange-400 mb-4" />
+              <h4 className="text-xl font-semibold text-white mb-2">Diverse Programs</h4>
+              <p className="text-white/70">
+                Choose from a wide variety of wellness programs including yoga, martial arts, and fitness training.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+              <Newspaper className="h-12 w-12 text-yellow-400 mb-4" />
+              <h4 className="text-xl font-semibold text-white mb-2">Community Events</h4>
+              <p className="text-white/70">
+                Join our wellness community through regular events, workshops, and social gatherings.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+              <Award className="h-12 w-12 text-red-400 mb-4" />
+              <h4 className="text-xl font-semibold text-white mb-2">Achievement Recognition</h4>
+              <p className="text-white/70">
+                Celebrate your wellness milestones with our comprehensive achievement and certification system.
+              </p>
+            </div>
+          </div>
+          
+          {/* Call to Action */}
+          <div className="text-center mt-12">
+            <Link 
+              href="/contact"
+              className="bg-cyan-500 hover:bg-cyan-400 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center space-x-2"
+            >
+              <span>Start Your Wellness Journey</span>
+              <span>→</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -354,8 +355,8 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/admin" className="text-white/70 hover:text-cyan-400 transition-colors">
-                    Admin Portal
+                  <Link href="/contact" className="text-white/70 hover:text-cyan-400 transition-colors">
+                    Join Our Academy
                   </Link>
                 </li>
               </ul>
