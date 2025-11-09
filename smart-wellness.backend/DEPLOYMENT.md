@@ -78,7 +78,7 @@ npm run dev
 
 ### GitHub Actions (`.github/workflows/deploy.yml`)
 - **Trigger**: Runs on push to main branch
-- **Node.js**: Uses Node.js 18
+- **Node.js**: Uses Node.js 20 (required for Next.js 15)
 - **Build**: Runs `npm run build`
 - **Deploy**: Automatically deploys to GitHub Pages
 
@@ -114,6 +114,11 @@ Any push to the main branch will automatically:
 1. Check Actions tab for error details
 2. Ensure all dependencies are in `package.json`
 3. Test build locally: `cd smart-wellness.backend && npm run build`
+
+### If you get Node.js version errors:
+- Next.js 14 requires Node.js ≥20.9.0
+- The workflow uses Node.js 20 for compatibility
+- For local development, ensure you have Node.js 20+ installed
 
 ## � Support
 - Check the **Issues** tab for known problems
