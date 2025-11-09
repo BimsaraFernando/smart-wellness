@@ -8,9 +8,9 @@ import { BookOpen, Plus, Search, ArrowLeft, Users, Clock, DollarSign, Calendar }
 const mockCourses = [
   {
     id: '1',
-    name: 'Karate Fundamentals',
-    description: 'Perfect for beginners looking to learn the basics of traditional Karate. This course covers fundamental stances, basic strikes, blocks, and kicks.',
-    instructor: 'Master Chen',
+    name: 'Yoga Fundamentals',
+    description: 'Perfect for beginners looking to learn the basics of yoga. This course covers fundamental poses, breathing techniques, meditation practices, and flexibility training.',
+    instructor: 'Master Sarah',
     level: 'beginner' as const,
     schedule: [
       { dayOfWeek: 'Monday', startTime: '18:00', endTime: '19:30' },
@@ -24,16 +24,16 @@ const mockCourses = [
       quarterly: 400,
       annual: 1400
     },
-    ageGroup: '8-16 years',
-    requirements: ['No prior experience needed', 'Uniform required after first month'],
+    ageGroup: '16+ years',
+    requirements: ['No prior experience needed', 'Yoga mat required'],
     createdAt: '2024-01-15',
     updatedAt: '2024-11-01'
   },
   {
     id: '2',
-    name: 'Advanced Sparring',
-    description: 'High-intensity sparring sessions for experienced martial artists. Focus on advanced techniques, strategy, and competitive fighting.',
-    instructor: 'Sensei Rodriguez',
+    name: 'Advanced Fitness Training',
+    description: 'High-intensity fitness program for experienced athletes. Focus on strength training, cardio conditioning, and athletic performance enhancement.',
+    instructor: 'Coach Rodriguez',
     level: 'advanced' as const,
     schedule: [
       { dayOfWeek: 'Tuesday', startTime: '19:00', endTime: '20:30' },
@@ -47,15 +47,15 @@ const mockCourses = [
       quarterly: 550,
       annual: 2000
     },
-    ageGroup: '16+ years',
-    requirements: ['Green belt minimum', 'Sparring gear required', 'Medical clearance'],
+    ageGroup: '18+ years',
+    requirements: ['Intermediate fitness level', 'Fitness gear required', 'Health clearance'],
     createdAt: '2024-02-01',
     updatedAt: '2024-10-15'
   },
   {
     id: '3',
-    name: 'Youth Martial Arts',
-    description: 'Fun and engaging martial arts program designed specifically for children. Emphasis on discipline, respect, and basic self-defense.',
+    name: 'Kids Wellness Program',
+    description: 'Fun and engaging wellness program designed specifically for children. Emphasis on healthy habits, physical activity, and mental well-being.',
     instructor: 'Instructor Williams',
     level: 'beginner' as const,
     schedule: [
@@ -77,8 +77,8 @@ const mockCourses = [
   },
   {
     id: '4',
-    name: 'Black Belt Mastery',
-    description: 'Elite training program for black belt holders focusing on mastery of advanced techniques, teaching skills, and leadership development.',
+    name: 'Wellness Coaching Certification',
+    description: 'Elite training program for wellness professionals focusing on coaching methodologies, client assessment, and program design.',
     instructor: 'Master Kim',
     level: 'advanced' as const,
     schedule: [
@@ -91,10 +91,125 @@ const mockCourses = [
       quarterly: 800,
       annual: 3000
     },
-    ageGroup: '18+ years',
-    requirements: ['Black belt 1st Dan minimum', 'Instructor recommendation', 'Leadership commitment'],
+    ageGroup: '21+ years',
+    requirements: ['Wellness background preferred', 'Professional commitment', 'Certification goals'],
     createdAt: '2024-03-01',
     updatedAt: '2024-11-05'
+  },
+  {
+    id: '5',
+    name: 'Nutrition & Healthy Living',
+    description: 'Comprehensive nutrition course designed to teach healthy eating habits, meal planning, and sustainable lifestyle changes for optimal wellness.',
+    instructor: 'Dr. Maria',
+    level: 'beginner' as const,
+    schedule: [
+      { dayOfWeek: 'Tuesday', startTime: '18:00', endTime: '19:00' },
+      { dayOfWeek: 'Thursday', startTime: '18:00', endTime: '19:00' }
+    ],
+    maxStudents: 15,
+    currentStudents: 12,
+    price: {
+      monthly: 130,
+      quarterly: 350,
+      annual: 1200
+    },
+    ageGroup: '16+ years',
+    requirements: ['No prior experience needed', 'Food journal recommended'],
+    createdAt: '2024-04-01',
+    updatedAt: '2024-11-01'
+  },
+  {
+    id: '6',
+    name: 'Mindfulness & Meditation',
+    description: 'Comprehensive mindfulness training combining meditation techniques, stress management, and mental wellness practices.',
+    instructor: 'Teacher Thompson',
+    level: 'intermediate' as const,
+    schedule: [
+      { dayOfWeek: 'Monday', startTime: '20:00', endTime: '21:30' },
+      { dayOfWeek: 'Wednesday', startTime: '20:00', endTime: '21:30' },
+      { dayOfWeek: 'Friday', startTime: '20:00', endTime: '21:30' }
+    ],
+    maxStudents: 18,
+    currentStudents: 14,
+    price: {
+      monthly: 180,
+      quarterly: 480,
+      annual: 1800
+    },
+    ageGroup: '18+ years',
+    requirements: ['Basic meditation experience preferred', 'Meditation cushion recommended'],
+    createdAt: '2024-05-01',
+    updatedAt: '2024-11-01'
+  },
+  {
+    id: '7',
+    name: 'Wushu Traditional Forms',
+    description: 'Traditional Chinese martial arts focusing on graceful movements, weapon techniques, and internal energy cultivation.',
+    instructor: 'Master Liu',
+    level: 'intermediate' as const,
+    schedule: [
+      { dayOfWeek: 'Tuesday', startTime: '17:00', endTime: '18:30' },
+      { dayOfWeek: 'Thursday', startTime: '17:00', endTime: '18:30' },
+      { dayOfWeek: 'Saturday', startTime: '14:00', endTime: '15:30' }
+    ],
+    maxStudents: 16,
+    currentStudents: 11,
+    price: {
+      monthly: 170,
+      quarterly: 450,
+      annual: 1650
+    },
+    ageGroup: '14+ years',
+    requirements: ['Basic martial arts experience preferred', 'Traditional uniform recommended'],
+    createdAt: '2024-06-01',
+    updatedAt: '2024-11-01'
+  },
+  {
+    id: '8',
+    name: 'Muay Thai Conditioning',
+    description: 'Authentic Thai boxing training focusing on striking techniques, clinch work, and traditional conditioning methods.',
+    instructor: 'Kru Martinez',
+    level: 'intermediate' as const,
+    schedule: [
+      { dayOfWeek: 'Monday', startTime: '19:30', endTime: '21:00' },
+      { dayOfWeek: 'Wednesday', startTime: '19:30', endTime: '21:00' },
+      { dayOfWeek: 'Friday', startTime: '19:30', endTime: '21:00' }
+    ],
+    maxStudents: 14,
+    currentStudents: 9,
+    price: {
+      monthly: 190,
+      quarterly: 520,
+      annual: 1900
+    },
+    ageGroup: '16+ years',
+    requirements: ['Basic fitness level required', 'Hand wraps and gloves', 'Shin guards recommended'],
+    createdAt: '2024-07-01',
+    updatedAt: '2024-11-01'
+  },
+  {
+    id: '9',
+    name: 'Tai Chi Wellness',
+    description: 'Gentle, meditative martial art focusing on slow, flowing movements and internal energy. Perfect for stress relief and balance improvement.',
+    instructor: 'Master Chen',
+    level: 'beginner' as const,
+    schedule: [
+      { dayOfWeek: 'Monday', startTime: '08:00', endTime: '09:00' },
+      { dayOfWeek: 'Wednesday', startTime: '08:00', endTime: '09:00' },
+      { dayOfWeek: 'Friday', startTime: '08:00', endTime: '09:00' },
+      { dayOfWeek: 'Saturday', startTime: '08:00', endTime: '09:00' }
+    ],
+    maxStudents: 20,
+    currentStudents: 16,
+    price: {
+      monthly: 140,
+      quarterly: 380,
+      annual: 1350
+    },
+    ageGroup: 'All ages (8+ years)',
+    requirements: ['No prior experience needed', 'Comfortable, loose clothing'],
+    createdAt: '2024-08-01',
+    updatedAt: '2024-11-01'
   }
 ];
 
@@ -130,16 +245,16 @@ export default function AdminCoursesPage() {
                 <ArrowLeft className="h-6 w-6" />
               </Link>
               <h1 className="text-2xl font-bold text-gray-900 flex items-center">
-                <BookOpen className="h-8 w-8 text-orange-600 mr-2" />
-                Course Management
+                <BookOpen className="h-8 w-8 text-blue-600 mr-2" />
+                Program Management
               </h1>
             </div>
             <Link 
               href="/admin/courses/new"
-              className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg flex items-center space-x-2 transition-colors"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center space-x-2 transition-colors"
             >
               <Plus className="h-5 w-5" />
-              <span>Create Course</span>
+              <span>Create Program</span>
             </Link>
           </div>
         </div>
@@ -152,11 +267,11 @@ export default function AdminCoursesPage() {
           <div className="bg-white rounded-lg shadow-sm p-6">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <BookOpen className="h-8 w-8 text-orange-600" />
+                <BookOpen className="h-8 w-8 text-blue-600" />
               </div>
               <div className="ml-4">
                 <div className="text-2xl font-bold text-gray-900">{mockCourses.length}</div>
-                <div className="text-sm text-gray-500">Total Courses</div>
+                <div className="text-sm text-gray-500">Total Programs</div>
               </div>
             </div>
           </div>
@@ -215,10 +330,10 @@ export default function AdminCoursesPage() {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
                 <input
                   type="text"
-                  placeholder="Search courses..."
+                  placeholder="Search programs..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
             </div>
@@ -226,7 +341,7 @@ export default function AdminCoursesPage() {
               <select
                 value={filterLevel}
                 onChange={(e) => setFilterLevel(e.target.value)}
-                className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 <option value="all">All Levels</option>
                 <option value="beginner">Beginner</option>
@@ -303,7 +418,7 @@ export default function AdminCoursesPage() {
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
                   <div
-                    className="bg-orange-500 h-2 rounded-full"
+                    className="bg-blue-500 h-2 rounded-full"
                     style={{ width: `${(course.currentStudents / course.maxStudents) * 100}%` }}
                   ></div>
                 </div>
@@ -313,23 +428,23 @@ export default function AdminCoursesPage() {
               <div className="flex flex-wrap gap-2">
                 <Link 
                   href={`/admin/courses/${course.id}`}
-                  className="text-orange-600 hover:text-orange-800 text-sm font-medium"
+                  className="text-blue-600 hover:text-blue-800 text-sm font-medium"
                 >
                   View Details
                 </Link>
                 <Link 
                   href={`/admin/courses/${course.id}/edit`}
-                  className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                  className="text-green-600 hover:text-green-800 text-sm font-medium"
                 >
                   Edit
                 </Link>
                 <Link 
                   href={`/admin/courses/${course.id}/students`}
-                  className="text-green-600 hover:text-green-800 text-sm font-medium"
+                  className="text-purple-600 hover:text-purple-800 text-sm font-medium"
                 >
                   Manage Students
                 </Link>
-                <button className="text-purple-600 hover:text-purple-800 text-sm font-medium">
+                <button className="text-orange-600 hover:text-orange-800 text-sm font-medium">
                   Schedule Class
                 </button>
               </div>
