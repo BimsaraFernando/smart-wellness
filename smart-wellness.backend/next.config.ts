@@ -5,6 +5,8 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   distDir: 'dist',
+  basePath: '/smart-wellness',
+  assetPrefix: '/smart-wellness/',
   images: {
     unoptimized: true
   }
