@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Users, CreditCard, TrendingUp, BookOpen, Newspaper, Award, Star, Clock, Calendar, Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import Header from "@/components/Header";
 
 // Mock data for popular courses
 const popularCourses = [
@@ -56,30 +57,10 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-800">
       {/* Header */}
-      <header className="bg-black/20 backdrop-blur-sm border-b border-white/10">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <Award className="h-8 w-8 text-cyan-400" />
-              <h1 className="text-2xl font-bold text-white">Smart Wellness</h1>
-            </div>
-            <nav className="hidden md:flex space-x-6">
-              <Link href="/courses" className="text-white hover:text-cyan-400 transition-colors">
-                Courses
-              </Link>
-              <Link href="/news" className="text-white hover:text-cyan-400 transition-colors">
-                News
-              </Link>
-              <Link href="/contact" className="text-white hover:text-cyan-400 transition-colors">
-                Contact
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Header currentPage="home" />
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
+      <section className="pt-28 pb-20 px-4">{/* Added pt-28 to account for fixed header */}
         <div className="container mx-auto text-center">
           <h2 className="text-5xl font-bold text-white mb-6">
             Achieve Your Wellness Goals

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Calendar, User, Tag, ArrowLeft, Clock, Eye } from "lucide-react";
+import Header from "@/components/Header";
 
 // Mock news data
 const newsArticles = [
@@ -120,22 +121,10 @@ export default function NewsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center space-x-4">
-            <Link href="/" className="text-gray-600 hover:text-gray-900">
-              <ArrowLeft className="h-6 w-6" />
-            </Link>
-            <h1 className="text-2xl font-bold text-gray-900 flex items-center">
-              <Calendar className="h-8 w-8 text-blue-600 mr-2" />
-              Latest News
-            </h1>
-          </div>
-        </div>
-      </div>
+      <Header currentPage="news" />
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white py-16">
+      <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white pt-28 pb-16">{/* Added pt-28 to account for fixed header */}
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">Stay Updated with Smart Wellness</h2>
           <p className="text-xl opacity-90 max-w-2xl mx-auto">

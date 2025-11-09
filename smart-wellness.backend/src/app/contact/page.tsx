@@ -15,6 +15,7 @@ import {
   Youtube,
   MessageCircle
 } from "lucide-react";
+import Header from "@/components/Header";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -58,22 +59,10 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center space-x-4">
-            <Link href="/" className="text-gray-600 hover:text-gray-900">
-              <ArrowLeft className="h-6 w-6" />
-            </Link>
-            <h1 className="text-2xl font-bold text-gray-900 flex items-center">
-              <MessageCircle className="h-8 w-8 text-blue-600 mr-2" />
-              Contact Us
-            </h1>
-          </div>
-        </div>
-      </div>
+      <Header currentPage="contact" />
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-16">
+      <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white pt-28 pb-16">{/* Added pt-28 to account for fixed header */}
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
           <p className="text-xl opacity-90 max-w-2xl mx-auto">
