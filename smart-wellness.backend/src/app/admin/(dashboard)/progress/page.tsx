@@ -69,7 +69,7 @@ const mockProgressData = [
   }
 ];
 
-const beltColors = {
+const beltColors: Record<string, string> = {
   'White Belt': 'bg-gray-100 text-gray-800',
   'Yellow Belt': 'bg-yellow-100 text-yellow-800',
   'Orange Belt': 'bg-orange-100 text-orange-800',

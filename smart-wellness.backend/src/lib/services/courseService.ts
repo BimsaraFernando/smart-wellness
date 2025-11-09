@@ -12,7 +12,7 @@ import {
   Timestamp 
 } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
-import { Course } from '@/types';
+import { Course } from '@/types/index';
 
 const COLLECTION_NAME = 'courses';
 
